@@ -12,7 +12,7 @@ int main(){
 	x = 0xEFFF;
 	y = 0x1000;
 
-	printf("The value of ~x is %d and ~y is %d\n", ~x,~y);
+	printf("The value of ~x is %x and ~y is %x\n", ~x,~y);
 	printf("The value of !x is %d in decimal and %u\n", !x, !x);
 	printf("The value of !y is %d and %u\n", !y, !y);
 	return 0;
