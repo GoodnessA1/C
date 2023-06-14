@@ -1,1 +1,1 @@
-This is a personal study repo
+PERSONAL PROGRAMMING STUDY
