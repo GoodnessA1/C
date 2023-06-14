@@ -1,0 +1,4 @@
+#!/bin/bash
+printenv
+echo $(( 2#$11011))
+
