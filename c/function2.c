@@ -18,9 +18,11 @@ int main(void)
 {
 	int op_1, op_2;
 
-	op_1 = 19;
-	op_2 = 17;
-
+	printf("Enter a number:\t");
+	scanf("%i", &op_1);
+	putc('\n', stdout);
+	puts("Enter another number:");
+	scanf("%i", &op_2);
 	MultiTwo(op_1, op_2);
 	printf("End of Function");
 	putchar('\n');
