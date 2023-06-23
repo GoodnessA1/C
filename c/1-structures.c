@@ -13,8 +13,6 @@ int main(void)
 { 
 	char y;
 	struct survey citizen;
-	puts("Ready?");
-	getchar(y);
 	DataEnter(&citizen);
 	DataDisplay(&citizen);
 	return 0;
