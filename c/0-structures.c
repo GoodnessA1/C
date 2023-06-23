@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 struct origin{
 	char state[20];
@@ -35,19 +36,28 @@ int main(void)
 void dataEntry(STO *ptr1)
 {
 	printf("Are you American? (y / n): ");
-	scanf("%c\n", &ptr1->country);
+	scanf("%c", &ptr1->country);
+	putchar('\n');
 
 	if (ptr1->country == 'y')
 	{
-		ptr1->nationality.american == "America";
+		puts("Enter your country: ");
+		scanf("%s", ptr1->nationality.american);
+		printf("Your state: ");
+		scanf("%s", ptr1->state);
 	}
 	else if (ptr1->country == 'n')
 	{
 		printf("Enter your country: ");
-		scanf("%s\n", ptr1->nationality.nonamerican);
+		scanf("%s", ptr1->nationality.nonamerican);
+		printf("Your state: ");
+		scanf("%s", ptr1->state);
 	}
-	printf("Your state: ");
-	scanf("%s\n", ptr1->state);
+	else
+	{
+		printf("NULL Entry. Try again");
+		dataEntry(ptr1);
+	}
 }
 void dataDisplay(STO *ptr2)
 {
