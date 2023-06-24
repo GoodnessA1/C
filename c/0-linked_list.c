@@ -1,6 +1,7 @@
 #include "0-lkd_list.h"
 #include <stdlib.h>
 #include <stdio.h>
+
 list_t *ptr;
 void create_list(int n)
 {
@@ -22,7 +23,7 @@ void create_list(int n)
 
 		for (i = 2; i <= n; i++)
 		{
-			ptr1 = (list_t *)malloc(sizeof(struct lkdlist));
+			ptr1 = fnptr = (list_t *)malloc(sizeof(struct lkdlist));
 			if (ptr1 == NULL)
 				puts("Memory allocation failed.\n");
 			else
@@ -45,19 +46,19 @@ void create_list(int n)
 
 void display_list(void)
 {
-	list_t *fnptr;
+	list_t *ptr2;
 
 	if (ptr == NULL)
 		puts("Nothing to display");
 	else
 	{
-		fnptr = ptr;
-		while (fnptr != NULL)
+		ptr2 = ptr;
+		while (ptr2 != NULL)
 		{
-			printf("Name: %s\n", fnptr->name);
-			printf("ID: %d\n", fnptr->id);
+			printf("Name: %s\n", ptr2->name);
+			printf("ID: %d\n", ptr2->id);
 
-			fnptr = fnptr->nextptr;
+			ptr2 = ptr2->nextptr;
 		}
 	}
 }
