@@ -1,0 +1,7 @@
+#!/bin/env bash
+#printing with a for loop
+
+for (( a=0; $a < 10; a++ ))
+do
+	echo $a
+done
