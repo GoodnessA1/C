@@ -1,0 +1,13 @@
+#!/bin/env bash
+#parsing with sed
+
+text="Hello world"
+for (( a=0; a < 10; a++ ))
+do
+	if [ $a -gt 5 ]
+	then
+		echo $text | sed 's/world/Goodness/'
+	else
+		echo $text
+	fi
+done
