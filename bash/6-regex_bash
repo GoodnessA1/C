@@ -1,0 +1,4 @@
+#!/bin/env bash
+#This is filtering with regular expressions
+
+awk /e.v/ 0-pid 1-processes | wc -l

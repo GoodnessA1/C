@@ -1,4 +1,4 @@
-README for shell scripting
+##README for shell scripting
 
 0-loops: prints 0-9 with a while loop
 1-loops: prints 0-9 with a for loop

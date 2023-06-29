@@ -1,0 +1,9 @@
+#!/bin/env bash
+#echo to infinity
+#type ctrl-c to stop
+
+while true
+do
+	echo "Singing to Infinity"
+	sleep 2
+done

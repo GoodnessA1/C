@@ -1,0 +1,4 @@
+#!/bin/env bash
+#This code list all the processes goimg on inthe system
+
+ps -f

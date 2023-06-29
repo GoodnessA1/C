@@ -6,7 +6,7 @@ list_t *ptr;
 void create_list(int n)
 {
 	list_t *ptr1, *fnptr;
-	int i, val;
+	int i;
 
 	ptr = (list_t *)malloc(sizeof(struct lkdlist));
 	if (ptr == NULL)
@@ -35,7 +35,7 @@ void create_list(int n)
 				printf("ID: ");
 				scanf("%i", &ptr1->id);
 				putchar('\n');
-				ptr->nextptr = NULL;
+				ptr1->nextptr = NULL;
 
 				fnptr->nextptr = ptr1;
 				fnptr = fnptr->nextptr;

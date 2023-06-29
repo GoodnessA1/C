@@ -1,0 +1,6 @@
+#!/bin/env bash
+#This scripts greets the user
+
+echo "Enter your name:";
+read NM;
+echo "Have a good day $NM";

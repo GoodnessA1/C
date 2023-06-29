@@ -1,0 +1,4 @@
+#!/bin/env bash
+#This list all processes of bash
+
+ps -auxf | grep bash
