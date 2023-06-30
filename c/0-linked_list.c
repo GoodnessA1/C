@@ -35,7 +35,6 @@ void create_list(int n)
 				printf("ID: ");
 				scanf("%i", &ptr1->id);
 				putchar('\n');
-				ptr1->nextptr = NULL;
 
 				fnptr->nextptr = ptr1;
 				fnptr = fnptr->nextptr;
