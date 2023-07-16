@@ -1,0 +1,2 @@
+Hello world! This is Goodness
+I am going to read it with a node app.
