@@ -2,14 +2,12 @@
 
 int main(int argc, char **argv)
 {
-	char *lineptr, *lineptr_copy;
+	char *lineptr, *lineptr_copy, *token;
 	char *prompt = "(SimpleShell) $ ";
 	const char *delim = " \n";
-	size_t n = 32;
-	size_t a = -1, m;
-	(void)argc; (void)argv;
-	int num_token = 0, i;
-	char *token;
+	size_t n = 32, a = -1, m;
+	int num_token, i;
+	(void)argc;
 
 	while (1)
 	{
@@ -26,7 +24,6 @@ int main(int argc, char **argv)
 		//Making a copy of lineptr
 		//Because it will be broken with strtok
 		//func
-		printf("%s\n", lineptr);
 		lineptr_copy = malloc(sizeof(char) * m);
 		if (lineptr_copy == NULL)
 		{
@@ -36,6 +33,7 @@ int main(int argc, char **argv)
 		strcpy(lineptr_copy, lineptr);
 		//Splitting lineptr
 		token = strtok(lineptr, delim);
+		num_token = 0;
 		while (token != NULL)
 		{
 			num_token++;
@@ -54,8 +52,9 @@ int main(int argc, char **argv)
 		argv[i] = NULL;
 		execmd(argv);
 
-		free(lineptr);
 	}
+	free(lineptr);
+	free(lineptr_copy);
 
 	return (0);
 }
