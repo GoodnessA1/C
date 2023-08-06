@@ -4,27 +4,28 @@
 	<meta charset='utf-8'>
 	<meta content='width=device-width, initial-scale=1.0'>
 	<link rel="stylesheet" href="style.css">
-	<script lang='JavaScript' src="index.js"></script>
 </head>
 <body>
 	<h2>Form Submission with nodejs</h2>
 	<div class='theform' name="theform">
-		<form action='/' method='post'>
+		<form name='theform' method='post'>
 			<label for="name">NAME:</label>
 			<br>
-			<input name='name' placeholder="Enter your name"/>
+			<input type='text' name='name' placeholder="Enter your name" id="name"/>
 			<br>
 			<label for="password">
 				PASSWORD:
 			</label>
 			<br>
-			<input name='password' placeholder='Enter your password'/>
+			<input type="password" name='password' placeholder='Enter your password' id="password"/>
 			<br><br>
-			<button	value='submit'>
+			<button onclick="submitForm()">
 				Submit
 			</button>
 		</form>
 		<p id='aform'></p>
 	</div>
+
+	<script src='index.js'></script>
 </body>
 </html>
