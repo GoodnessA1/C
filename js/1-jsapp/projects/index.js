@@ -1,4 +1,5 @@
-function submitForm() {
+/**
+ * function submitForm() {
 	var name = document.theform.name.value;
 	var password = document.theform.password.value;
 
@@ -19,7 +20,7 @@ function submitForm() {
 		.catch(error => console.log(error))
 }
 console.log(name + " " +  password)
-/**
+*/
 fetch('http://127.0.0.1:5000', {
 	method: 'POST',
 	body: JSON.stringify({
@@ -37,10 +38,6 @@ fetch('http://127.0.0.1:5000', {
 
 fetch('http://127.0.0.1:5000', {
 	method: 'GET',
-	body: JSON.stringify({
-		name: 'Goodness',
-		password: 17
-	}),
 	headers: {
 		"Content-Type": 'application/html; charset=utf-8'
 	}
@@ -48,4 +45,3 @@ fetch('http://127.0.0.1:5000', {
 	.then(response => response.text())
 	.then(data => console.log(data))
 	.catch(error => console.error(error))
-*/
