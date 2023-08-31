@@ -26,11 +26,17 @@ def func():
     else:
         print("Invalid function\n")
         
+try:
+    func()
+except ValueError:
+    print("Invalid address\n")
 
-func()
 while True:
     n = input("Do you still want to perform another function(Y/N): ")
     if n == "Y":
-        func()
+        try:
+            func()
+        except ValueError:
+            print("Invalid Address\n")
     elif n == "N":
         break
